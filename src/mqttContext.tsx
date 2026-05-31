@@ -36,7 +36,7 @@ const MqttContext = createContext<MqttContextType>({
 
 export const useMqtt = () => useContext(MqttContext);
 
-const BROKER_URL = 'wss://test.mosquitto.org:8081/mqtt';
+const BROKER_URL = 'wss://broker.hivemq.com:8884/mqtt';
 
 // Extract "lampuX" from "smarthome/lampuX" or "smarthome/lampuX/status"
 const getLampKey = (topic: string): keyof AppState['relays'] | null => {
